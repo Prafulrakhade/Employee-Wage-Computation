@@ -10,6 +10,7 @@ namespace EmployeeComp
             Class1 check = new Class1();
             check.Attendance();
             check.DailyWages();
+            check.PartTime();
         }
     }
 }

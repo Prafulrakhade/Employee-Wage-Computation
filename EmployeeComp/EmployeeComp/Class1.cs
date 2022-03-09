@@ -8,7 +8,9 @@ namespace EmployeeComp
 {
     public class Class1
     {
+        int isPartTime = 0;
         int isPresent = 1;
+        int isFullTime = 2;
         int empCheck;
         int result;
         int empHrs=1;
@@ -43,6 +45,30 @@ namespace EmployeeComp
                 Console.WriteLine("Employee is Absent");
                 Console.WriteLine("Emmployee wage =0 ");
             }
+        }
+        public void PartTime()
+        {
+
+
+            int randomCheck = random.Next(3);
+
+            if (randomCheck == isPartTime)
+            {
+                Console.WriteLine("Employee work Half Day only");
+                empHrs = 4;
+            }
+            else if (empCheck == isFullTime)
+            {
+                Console.WriteLine("Employee work Full Day");
+                empHrs = 8;
+            }
+            else
+            {
+                Console.WriteLine("Employee is Absent");
+                empHrs = 0;
+            }
+            Console.WriteLine("Todays Salary is : ");
+            Console.WriteLine(empRatePerHr * empHrs);
         }
     }
 }
