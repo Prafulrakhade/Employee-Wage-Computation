@@ -11,6 +11,7 @@ namespace EmployeeComp
             check.Attendance();
             check.DailyWages();
             check.PartTime();
+            check.SwitchCase();
         }
     }
 }

@@ -67,8 +67,25 @@ namespace EmployeeComp
                 Console.WriteLine("Employee is Absent");
                 empHrs = 0;
             }
-            Console.WriteLine("Todays Salary is :");
-            Console.WriteLine(empRatePerHr * empHrs);
+            Console.WriteLine("Todays Salary is : "+empRatePerHr * empHrs);
+        }
+        public void SwitchCase()
+        {
+            int randomCheck = random.Next(3);
+            switch(randomCheck)
+            {
+                case 1:
+                    empHrs = 8;
+                    break;
+                case 2:
+                    empHrs = 4;
+                    break;
+                default:
+                    empHrs = 0;
+                    break;
+            }
+
+            Console.WriteLine("By Switch Case salary is : "+empRatePerHr * empHrs);
         }
     }
 }
