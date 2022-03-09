@@ -13,9 +13,11 @@ namespace EmployeeComp
         int isFullTime = 2;
         int empCheck;
         int result;
+        int totalSalary;
+        int salary;
         int empHrs=1;
         int empRatePerHr = 20;
-
+        int totalWorkingDays = 20;
         Random random = new Random();
         public void Attendance()
         {
@@ -83,9 +85,36 @@ namespace EmployeeComp
                 default:
                     empHrs = 0;
                     break;
-            }
 
-            Console.WriteLine("By Switch Case salary is : "+empRatePerHr * empHrs);
+            }
+            Console.WriteLine("By Switch Case salary is : "+ empRatePerHr * empHrs);
+        }
+        public void WagesForMonth()
+        { 
+            while( 1<=totalWorkingDays)
+            {
+                totalWorkingDays--;
+                int randomCheck = random.Next(3);
+                switch (randomCheck)
+                {
+                    case 1:
+                        Console.WriteLine("Full Day : ");
+                        empHrs = 8;
+                        break;
+                    case 2:
+                        Console.WriteLine("Half Day : ");
+                        empHrs = 4;
+                        break;
+                    default:
+                        Console.WriteLine("Absent : ");
+                        empHrs = 0;
+                        break;
+                        salary = (empRatePerHr * empHrs);
+                        totalSalary = (totalSalary + salary);
+                }
+
+                Console.WriteLine( totalSalary );
+            }
         }
     }
 }
