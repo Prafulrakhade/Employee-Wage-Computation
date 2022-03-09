@@ -67,7 +67,7 @@ namespace EmployeeComp
                 Console.WriteLine("Employee is Absent");
                 empHrs = 0;
             }
-            Console.WriteLine("Todays Salary is : ");
+            Console.WriteLine("Todays Salary is :");
             Console.WriteLine(empRatePerHr * empHrs);
         }
     }
