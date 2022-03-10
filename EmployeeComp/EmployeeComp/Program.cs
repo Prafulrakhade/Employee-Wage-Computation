@@ -13,6 +13,7 @@ namespace EmployeeComp
             check.PartTime();
             check.SwitchCase();
             check.WagesForMonth();
+            check.WorkingHrsAndDayForMonth();
         }
     }
 }
